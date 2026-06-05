@@ -1,0 +1,46 @@
+# Data - never commit raw/processed data
+data/
+*.csv
+*.parquet
+*.feather
+
+# Models - large binary artifacts
+models/*.pkl
+models/*.joblib
+models/*.json
+models/*.cbm
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
