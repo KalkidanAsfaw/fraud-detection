@@ -45,5 +45,11 @@ Thumbs.db
 *.log
 logs/
 
-# Reports
-reports/
+# Backup / generated review artifacts
+backup/
+
+# Report deliverables (not tracked)
+reports/final-report.docx
+reports/interim-1-report.docx
+reports/interim-1-report.md
+reports/final-report.md
