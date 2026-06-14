@@ -14,6 +14,12 @@ def test_ip_to_int_valid():
     assert result == 3232235777
 
 
+def test_ip_to_int_float():
+    # Source data stores IPs as floats — must cast to int, not return NaN.
+    result = ip_to_int(732758368.79972)
+    assert result == 732758368
+
+
 def test_ip_to_int_invalid():
     result = ip_to_int("not_an_ip")
     assert np.isnan(result)
