@@ -6,9 +6,15 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 
-def ip_to_int(ip_str: str) -> float:
+def ip_to_int(ip_val) -> float:
+    # Source data stores IPs as floats (e.g. 732758368.79972); cast those
+    # directly. Fall back to dotted-notation parsing for string IPs.
     try:
-        return struct.unpack("!I", socket.inet_aton(str(ip_str)))[0]
+        return int(float(ip_val))
+    except (ValueError, TypeError):
+        pass
+    try:
+        return struct.unpack("!I", socket.inet_aton(str(ip_val)))[0]
     except Exception:
         return np.nan
 

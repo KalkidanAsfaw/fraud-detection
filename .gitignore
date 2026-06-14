@@ -10,6 +10,12 @@ models/*.joblib
 models/*.json
 models/*.cbm
 
+# ...but keep the small, reproducible artifacts tracked (large RFs via scripts/train.py)
+!models/logistic_regression_fraud.joblib
+!models/logistic_regression_creditcard.joblib
+!models/scaler_fraud.joblib
+!models/scaler_creditcard.joblib
+
 # Python
 __pycache__/
 *.py[cod]
